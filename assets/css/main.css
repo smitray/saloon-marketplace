@@ -209,9 +209,11 @@ body {
       }
     }
 
-    img {
-      w: 100%;
-      h: auto;
+    picture{
+      img {
+        w: 100%;
+        h: auto;
+      }
     }
   }
 
@@ -380,7 +382,7 @@ body {
 
   &__requirements {
     @media only map(breakpoints, phone) {
-      img {
+      picture {
         display: none;
       }
 
@@ -406,10 +408,12 @@ body {
         fz: 3rem;
       }
     }
-    img {
-      w: 100%;
-      h: auto;
-      display: block;
+    picture{
+      img {
+        w: 100%;
+        h: auto;
+        display: block;
+      }
     }
 
     &--ctWr {
@@ -459,6 +463,10 @@ body {
     .container--block--4x {
       p: 4px;
 
+      img {
+        m: 1.6rem * 2rem;
+      }
+
       &:nth-child(1) {
         img {
           m: 2.5rem *;
@@ -471,7 +479,7 @@ body {
       }
       &:nth-child(3) {
         img {
-          m: 1rem * 2.5rem;
+          m: 1.6rem * 2.5rem;
         }
       }
     }

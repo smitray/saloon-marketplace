@@ -5,8 +5,28 @@
       banner
     "
   >
-    <img src="~/assets/img/banner-min.png" alt="" class="above-mobile" />
-    <img src="~/assets/img/banner_image-min.jpg" alt="" class="on-mobile" />
+    <picture alt="Banner image" class="above-mobile">
+      <source
+        :srcSet="require('~/assets/img/banner-min.png?webp')"
+        type="image/webp"
+      />
+      <source
+        :srcSet="require('~/assets/img/banner-min.png')"
+        type="image/jpeg"
+      />
+      <img :src="require('~/assets/img/banner-min.png')" />
+    </picture>
+    <picture alt="Banner image" class="on-mobile">
+      <source
+        :srcSet="require('~/assets/img/banner_image-min.jpg?webp')"
+        type="image/webp"
+      />
+      <source
+        :srcSet="require('~/assets/img/banner_image-min.jpg')"
+        type="image/jpeg"
+      />
+      <img :src="require('~/assets/img/banner_image-min.jpg')" />
+    </picture>
     <div class="banner__content">
       <div class="banner__content--wr">
         <div class="banner__logo">
@@ -34,21 +54,23 @@ export default {}
 
 <style lang="postcss" scoped>
 .banner {
-  img {
-    w: 100%;
-    h: auto;
-    display: block;
+  picture {
+    img {
+      w: 100%;
+      h: auto;
+      display: block;
+    }
   }
 
-  img.on-mobile {
+  picture.on-mobile {
     display: none;
   }
 
   @media only map(breakpoints, phone) {
-    img.on-mobile {
+    picture.on-mobile {
       display: block;
     }
-    img.above-mobile {
+    picture.above-mobile {
       display: none;
     }
 
