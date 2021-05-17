@@ -4,9 +4,13 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/saloon-marketplace/',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'saloon-marketplace-web',
+    title: 'Saloon Marketplace App',
     htmlAttrs: {
       lang: 'en',
     },
