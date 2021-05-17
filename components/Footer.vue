@@ -73,6 +73,13 @@
       float: left;
       m: 1rem 8rem;
 
+      a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: capitalize;
+        fw: 800;
+      }
+
       @media only map(breakpoints, phone) {
         text-align: center;
         width: 100%;
@@ -135,13 +142,6 @@
           fz: 3.2rem;
           letter-spacing: 1rem;
         }
-      }
-
-      a {
-        text-decoration: none;
-        color: #fff;
-        text-transform: capitalize;
-        fw: 800;
       }
     }
   }
