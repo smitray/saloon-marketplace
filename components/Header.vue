@@ -37,7 +37,7 @@
             Regular bookings<br />adjusted to your schedule
           </p>
           <p class="banner__details--specialQuote">
-            Make up to £50/h with Dazlur
+            Make up to £50/hr with Dazlur
           </p>
         </div>
         <div class="banner__details--link">

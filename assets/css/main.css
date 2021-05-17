@@ -190,6 +190,16 @@ body {
 .landing {
   m: 2rem 0;
 
+  h3.header--services {
+    fz: 5rem;
+    mb: 2rem;
+
+    @media only map(breakpoints, phone) {
+      margin-top: 0;
+      font-size: 3rem;
+    }
+  }
+
   &__what {
     h3 {
       fz: 5rem;

@@ -139,11 +139,176 @@
         </div>
       </div>
     </div>
+    <div
+      class="
+        container container--block container--wr container--ovh container--rel
+      "
+    >
+      <h3 class="header--services">Featured Services</h3>
+    </div>
+    <div
+      class="
+        container container--block container--wr container--ovh container--rel
+        landing__professional
+      "
+    >
+      <div class="container--block--3x">
+        <div class="landing__professional--wr">
+          <picture alt="Banner image">
+            <source
+              :srcSet="require('~/assets/img/waxing.png?webp')"
+              type="image/webp"
+            />
+            <source
+              :srcSet="require('~/assets/img/waxing.png')"
+              type="image/jpeg"
+            />
+            <img :src="require('~/assets/img/waxing.png')" />
+          </picture>
+          <h3>Body & Waxing</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      <div class="container--block--3x">
+        <div class="landing__professional--wr">
+          <picture alt="Banner image">
+            <source
+              :srcSet="require('~/assets/img/manicure.png?webp')"
+              type="image/webp"
+            />
+            <source
+              :srcSet="require('~/assets/img/manicure.png')"
+              type="image/jpeg"
+            />
+            <img :src="require('~/assets/img/manicure.png')" />
+          </picture>
+          <h3>Manicure & Pedicure</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+      <div class="container--block--3x">
+        <div class="landing__professional--wr">
+          <picture alt="Banner image">
+            <source
+              :srcSet="require('~/assets/img/massage.png?webp')"
+              type="image/webp"
+            />
+            <source
+              :srcSet="require('~/assets/img/massage.png')"
+              type="image/jpeg"
+            />
+            <img :src="require('~/assets/img/massage.png')" />
+          </picture>
+          <h3>Massage</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="
+        container container--full container--wr container--rel container--ovh
+        landing__join
+      "
+    >
+      <h3>join now</h3>
+      <div
+        class="
+          container container--block container--wr container--ovh container--rel
+        "
+      >
+        <ul>
+          <li :class="{ active: form_slider === 1 }">
+            Enter your postcode
+            <div class="landing__join--icons">
+              <img src="~/assets/img/join-1.png" alt="" />
+            </div>
+          </li>
+          <li :class="{ active: form_slider === 2 }">
+            phone verification
+            <div class="landing__join--icons">
+              <img src="~/assets/img/join-2.png" alt="" />
+            </div>
+          </li>
+          <li :class="{ active: form_slider === 3 }">
+            contact details
+            <div class="landing__join--icons">
+              <img src="~/assets/img/join-3.png" alt="" />
+            </div>
+          </li>
+          <li :class="{ active: form_slider === 4 }">
+            upload the documents
+            <div class="landing__join--icons">
+              <img src="~/assets/img/join-4.png" alt="" />
+            </div>
+          </li>
+        </ul>
+        <form action="#" enctype="multipart/form-data">
+          <div v-if="form_slider === 1" class="form__slider">
+            <h4>Enter your postcode to get started</h4>
+            <input type="text" placeholder="Enter your postcode" />
+          </div>
+          <div v-if="form_slider === 2" class="form__slider">
+            <h4>Please verify your phone</h4>
+            <input type="text" placeholder="Enter your phone" />
+            <input
+              type="text"
+              placeholder="Please enter the OTP you received"
+            />
+          </div>
+          <div v-if="form_slider === 3" class="form__slider">
+            <h4>Please add your personal information</h4>
+            <input type="text" placeholder="Your first name" />
+            <input type="text" placeholder="Your last name" />
+            <input type="text" placeholder="Your address" />
+            <input type="text" placeholder="Passport number" />
+            <input type="text" placeholder="Nil number" />
+          </div>
+          <div v-if="form_slider === 4" class="form__slider">
+            <h4>Please provide the following documents</h4>
+            <div class="form__slider--document">
+              <p>Proof of Address (Format: jpg, jpeg, png, pdf)</p>
+              <input ref="addressProof" type="file" />
+              <p>Your CV (Format: doc or keynote)</p>
+              <input ref="applicantCV" type="file" />
+              <p>
+                PROOF OF THE RIGHT TO WORK (Visa/Residence Card) (applicable for
+                non-EU citizen) (Format: jpg, jpeg, png, pdf)
+              </p>
+              <input ref="rightToWork" type="file" />
+              <label for="tnc"
+                ><input id="tnc" type="checkbox" name="tnc" />I HAVE READ AND
+                ACCEPT THE DAZLURE BEAUTICIANS' SERVICE AGREEMENT</label
+              >
+            </div>
+            <input type="submit" value="Submit" class="btn-primary" />
+          </div>
+          <a
+            v-if="form_slider !== 4"
+            href="#"
+            class="btn-primary"
+            @click.prevent="nextForm"
+            >Next</a
+          >
+        </form>
+      </div>
+    </div>
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      form_slider: 1,
+    }
+  },
+  methods: {
+    nextForm() {
+      this.form_slider += 1
+    },
+  },
+})
 </script>

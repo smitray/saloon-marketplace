@@ -1,4 +1,6 @@
-# saloon-marketplace-web
+# Dazlure
+
+Dazlure is a concept design for beauty services platform. This a portfolio design, developed using Nuxt.js and postcss for styling. Simple responsive landing page design.   
 
 ## Build Setup
 
@@ -17,4 +19,10 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+### Technologies
+- Nuxt.js (Vue.js)
+- SSG
+- PostCSS for styling
+- Typescript
+- Linting with Eslint and Prettier
+- Github automation for deploying static site on GithubPages
